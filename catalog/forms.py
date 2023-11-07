@@ -2,6 +2,8 @@ import re
 
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+from django.forms import ModelForm
+
 from .models import CustomUser, Request
 
 
@@ -68,4 +70,10 @@ class LoginForm(forms.Form):
 class RequestForm(forms.ModelForm):
     class Meta:
         model = Request
-        fields = ['title', 'description', 'category', 'photo_of_room']
+        fields = ['title', 'description', 'category', 'photo_of_room', 'user']
+
+
+class CreateRequestForm(ModelForm):
+    class Meta:
+        model = Request
+        fields = ('title', 'description', 'category', 'photo_of_room')

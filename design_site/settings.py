@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'catalog.apps.CatalogConfig',
     'django.contrib.admin',
+    'bootstrap4'
 ]
 
 MIDDLEWARE = [

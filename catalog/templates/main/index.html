@@ -20,7 +20,7 @@
       {% if user.is_authenticated %}
         <p>Ваш никнейм:{{ user.username }}!</p>
         <a href="{% url 'home' %}">Личный кабинет</a>
-        <br>
+        <a class="dropdown-item" href="{% url 'profile' %}">Профиль</a>
         <a href="{% url 'logout' %}">Выйти из аккаунта</a>
 
     <br>
